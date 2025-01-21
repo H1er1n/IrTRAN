@@ -1,0 +1,691 @@
+ <!--Найти Груз модальное окно -->
+ <div class="modal fade" id="staticGruz" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Груз</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                          <th>Код груза ЕТСНГ</th>
+                          <th>Наименование груза</th>
+                          <th>Краткое наименование</th>
+                          <th>Номер группы груза</th>
+                          <th>Наименование группы груза</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+<!--Найти Вид транспотртной упаковки модальное окно -->
+<div class="modal fade" id="staticTransportUpakovka" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Вид транспотртной упаковки</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                          <th>ИД транспортной упаковки</th>
+                          <th>Код транспортной упаковки</th>
+                          <th>Наименование транспортной упаковки</th>
+                          <th>Краткое наименование транспортной упаковки</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+<!--Найти Вид подвижного состава модальное окно -->
+<div class="modal fade" id="staticVidPodvizSostava" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Вид подвижного состава</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                          <th>Код подвижного состава</th>
+                          <th>Наименование</th>
+                          <th>Аббревиатура</th>
+                          <th>Код для РПП</th>
+                          <th>Код  рода вагонов в накладной</th>
+                          <th>Наименование  рода вагонов в накладной</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+ <!--Найти Владелец/арендатор вагонов модальное окно -->
+ <div class="modal fade" id="staticVladelecArendatorVagonov" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Владелец/арендатор вагонов</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                          <th>ИД холдинга</th>
+                          <th>Наименование холдинга</th>
+                          <th>ОКПО</th>
+                          <th>Наименование грузополучателя</th>
+                          <th>ИД бизнеса</th>
+                          <th>Наименование бизнеса</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+ <!--Найти Страна назначения модальное окно -->
+ <div class="modal fade" id="staticStranaNaznach" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Страна назначения</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                          <th>Код ОСКМ</th>
+                          <th>Наименование страны</th>
+                          <th>Краткое наименование</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+<!--Найти Станция назначения/выхода СНГ модальное окно -->
+<div class="modal fade" id="staticStanciaNaznach" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Страна отправления</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                          <th>Код станции</th>
+                          <th>Наименование станции</th>
+                          <th>Краткое наименование</th>
+                          <th>Код страны</th>
+                          <th>Наименование страны</th>
+                          <th>Код дороги</th>
+                          <th>Код ОСЖД</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+<!--Найти Станция выхода из России модальное окно -->
+<div class="modal fade" id="staticStanciaVihoda" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Станция выхода из России</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                            <th>Код станции</th>
+                            <th>Наименование станции</th>
+                            <th>Краткое наименование</th>
+                            <th>Код страны</th>
+                            <th>Наименование страны</th>
+                            <th>Код дороги</th>
+                            <th>Код ОСЖД</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+<!--Найти Пункт перевалки модальное окно -->
+<div class="modal fade" id="staticPunktPerevalky" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Пункт перевалки</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                            <th>Код станции</th>
+                            <th>Наименование станции</th>
+                            <th>Краткое наименование</th>
+                            <th>Код страны</th>
+                            <th>Наименование страны</th>
+                            <th>Код дороги</th>
+                            <th>Код ОСЖД</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+<!--Найти Организация в пункте перевалки модальное окно -->
+<div class="modal fade" id="staticOrgPunktPerevalky" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Организация в пункте перевалки</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                          <th>Код</th>
+                          <th>Наименование</th>
+                          <th>Краткое наименование</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+<!--Найти Грузополучатель модальное окно -->
+<div class="modal fade" id="staticGruzopoluchatel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Грузополучатель</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                          <th>Код ОКПО</th>
+                          <th>Наименование грузополучатель</th>
+                          <th>ИД бизнеса</th>
+                          <th>ИД холдинга</th>
+                          <th>Наименование холдинга</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+<!--Добавить Признак назначения модальное окно -->
+<div class="modal fade" id="DobavitPriznak" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Признак назначения</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                          <th>Код</th>
+                          <th>Наименование</th>
+                          <th>Примечание</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
+
+ <!--Найти Договор на особых условиях модальное окно -->
+ <div class="modal fade" id="staticDogovorNaOsob" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #7DA5F0;">
+          <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Договор на особых условиях</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row justify-content-md-center mb-2">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                <i class="fas fa-times"></i> 
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                <table class="table table-hover table-bordered border-white">
+                    <thead style="background-color: #7DA5F0; color: white;">
+                        <tr>
+                          <th>Код</th>
+                          <th>Наименование</th>
+                          <th>Краткое</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                      </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-md-end">
+                 <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                 <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!----------------------------- -->
