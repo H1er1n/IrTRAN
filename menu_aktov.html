@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акты</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .header {
+            background-color: #7DA5F0;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Распределение пространства между элементами */
+            padding: 0 15px; /* Отступы слева и справа */
+            width: 100%; /* Ширина на всю страницу */
+            position: fixed; /* Закрепление шапки в верхней части страницы */
+            top: 0; /* Положение вверху */
+            left: 0; /* Положение слева */
+            z-index: 1000; /* Установка уровня наложения */
+        }
+        .header .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+        }
+        .header .title {
+            flex-grow: 1; /* Занять все доступное пространство */
+            text-align: center; /* Центрирование текста */
+        }
+        .dropdown-toggle::after {
+            margin-left: 0.255em;
+            vertical-align: 0.255em;
+            content: '';
+            border: solid transparent;
+            border-width: 0.2em 0.2em 0 0.2em;
+            border-top-color: #000;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        .dropdown {
+            margin-left: 5px; /* Отступ между текстом и кнопкой */
+            margin-right: 30px;
+        }
+        body {
+            padding-top: 50px; /* Отступ сверху для контента, чтобы не перекрывался шапкой */
+        }
+
+        .search-box {
+            background-color: white;
+            height: 100px;
+            width: 100%; /* Ширина на всю страницу */
+            position: fixed; /* Закрепление шапки в верхней части страницы */
+            top: 50; /* Положение вверху */
+            left: 0; /* Положение слева */
+            z-index: 1000; /* Установка уровня наложения */
+            border-bottom: solid gray 1px;
+        }
+
+        .content-container {
+            padding: 100px 300px;
+            
+        }
+        .search-container {
+            margin: 20px 0; /* Отступы сверху и снизу для контейнера поиска */
+            padding: 0 300px;
+        }
+        
+        .card-square {
+            width: 200px; /* Ширина квадрата */
+            height: 200px; /* Высота квадрата */
+            background-color: #EFEFEF; /* Цвет фона */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрирование по вертикали */
+            justify-content: center; /* Центрирование по горизонтали */
+            position: relative;
+            transition: background-color 0.3s; /* Плавный переход цвета */
+            cursor: pointer; /* Изменение курсора при наведении */
+            text-align: center; /* Центрирование текста */
+            margin: 5px; /* Центрирование карточки в родительском элементе */
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        .card-square:hover {
+            background-color: #4F85EB; /* Цвет при наведении */
+        }
+        .card-square img {
+            max-width: 50%; /* Ограничение размера иконки */
+            max-height: 50%; /* Ограничение размера иконки */
+            margin-bottom: 5px; /* Отступ между иконкой и текстом */
+        }
+        .card-text {
+            font-weight: bold;
+            margin: 0; /* Убираем отступы у текста */
+            font-size: 16px; /* Размер шрифта */
+            color: #545556; /* Цвет текста */
+        }
+        .card-square:hover .card-text {
+            color: white; /* Цвет текста при наведении */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="/files/syspanellogo_2.png" alt="Логотип" height="30px">
+        </div>
+        <div class="title">
+            <h5 class="mb-0" style="color: white;"><b>Тренажер ЭТРАН - Акты</b></h5>
+        </div>
+        <div class="dropdown">
+            <span style="color: white;"><b>Обучающийся</b></span><br>
+            <span style="color: white;">ИрГУПС</span>
+        </div>
+        <a href="/новые формы/login.html"><img src="/files/icons8-выход-50.png" alt="Выйти" style="height: 30px; width: 30px;"></a>
+    </div>
+    
+    <div class="search-box">
+        <div class="search-container">
+            <input type="text" class="form-control" placeholder="Поиск">
+        </div>
+    </div>
+        
+    <div class="content-container">
+        <div class="row mt-4 justify-content-center">
+            
+            <div class="col-md-3">
+                <a class="card-square" style="border-radius: 10px;" href="/новые формы/menu_akt.html">
+                    <img src="https://cdn-icons-png.freepik.com/512/3566/3566009.png" alt="Акты">
+                    <span class="card-text">Акт (общей формы) ГУ-23</span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a class="card-square" style="border-radius: 10px;" href="/новые формы/menu_kom_akt.html">
+                    <img src="https://d1xez26aurxsp6.cloudfront.net/models/mkjAgYDBaZG/thumbnails/6361d9e53a2ff.png" alt="Памятка приемосдатчика">
+                    <span class="card-text">Акт (коммерческий) ГУ-22</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
