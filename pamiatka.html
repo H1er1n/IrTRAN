@@ -150,7 +150,7 @@
             <span style="color: white;">Памятка приемасдатчика (Заготовка №----)</span>
         </div>
         <div class="dropdown">
-            <a href="menu_pamiatka.html"><img src="files/icons8-закрыть-50.png" alt="Закрыть" style="height: 30px; width: 30px;"></a>
+            <a href="/menu_pamiatka.html"><img src="files/icons8-закрыть-50.png" alt="Закрыть" style="height: 30px; width: 30px;"></a>
         </div>
     </div>
 
@@ -172,9 +172,6 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="History-tab" data-toggle="tab" data-target="#History-tab-pane" type="button" role="tab" aria-controls="History-tab-pane" aria-selected="false">История</button>
               </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="Sviazdoc-tab" data-toggle="tab" data-target="#Sviazdoc-tab-pane" type="button" role="tab" aria-controls="Sviazdoc-tab-pane" aria-selected="false">Связные документы</button>
-              </li>
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" style="margin-top: 1em;" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
@@ -189,10 +186,35 @@
                         <label class="col-auto col-form-label mb-0 label-custom" style="width: auto;">Утверждена ОАО "РЖД" в 2015г.</label>
                     </div>
 
+
                     <div class="row mb-1">
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">Станция:</label>
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(Наименование станции)</label>
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(Номер станции)</label>
+                        <label class="col-auto col-form-label mb-0 label-custom">Тип памятки</label>
+                        <div class="col-3">
+                            <select class="form-select mt-0 custom-input">
+                                <option value="">Выберете элемент списка</option>
+                                <option value="На уборку">На уборку</option>
+                                <option value="На подачу">На подачу</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row mb-1">
+                        <label class="col-auto col-form-label mb-0 label-custom">Станция</label>
+                        <div class="col-auto">
+                            <div class="input-group" style="width: 270px;">
+                                <input type="text" class="form-control custom-search" placeholder="Поиск" aria-label="Введите запрос">
+                                <button class="btn btn-outline-secondary" type="button" data-toggle="modal" data-target="#Staition">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                       
+                        <label class="col-auto col-form-label mb-0 label-custom" style="width: 150px;">Номер станции</label>
+                        <div class="col-auto">
+                            <input type="text" class="form-control mt-0 disabled-input" style="width: 120px;" placeholder="" disabled="disabled">
+                        </div>
                     </div>
 
                     <div class="row mb-1 justify-content-md-center">
@@ -200,21 +222,42 @@
                     </div>
 
                     <div class="row mb-1">
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">Наименование владельца п/п(клиента):</label>
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(Наименование клиента/владельца)</label>
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">Место подачи:</label>
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(Наименование Места подачи)</label>
+                        <label class="col-auto col-form-label mb-0 label-custom">Наименование владельца п/п(клиента)</label>
+                         <div class="col-auto">
+                            <div class="input-group" style="width: 270px;">
+                                <input type="text" class="form-control custom-search" placeholder="Поиск" aria-label="Введите запрос">
+                                <button class="btn btn-outline-secondary" type="button" data-toggle="modal" data-target="#NaimenovanieVladelca">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <label class="col-auto col-form-label mb-0 label-custom" style="width: 150px;">Место подачи</label>
+                        <div class="col-auto">
+                            <input type="text" class="form-control mt-0 custom-input" placeholder="">
+                        </div>
                     </div>
 
                     <div class="row mb-1">
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">Подача производилась:</label>
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(Наименование кем производилась подача)</label>
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">Индекс поезда:</label>
-                        <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(индекс)</label>
+                        <label class="col-auto col-form-label mb-0 label-custom" >Подача производилась локомотивом</label>
+                        <div class="col-auto">
+                            <input type="text" class="form-control mt-0 custom-input"  placeholder="">
+                        </div>
+
+                        <label class="col-auto col-form-label mb-0  label-custom" style="width: 150px;">Индекс поезда</label>
+                        <div class="col-auto">
+                            <input type="text" class="form-control mt-0 custom-input" placeholder="">
+                        </div>
                     </div>
 
                     <div class="row mb-1">
-                        
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-custom" type="button" data-toggle="modal" data-target="#OsnovnoyRazdelPamaitky">Добавить</button>
+                            <button type="button" class="btn btn-custom">Изменить</button>
+                            <button type="button" class="btn btn-custom">Удалить</button> 
+                            <button type="button" class="btn btn-custom">Копировать</button> 
+                            <button type="button" class="btn btn-custom">Вставить</button> 
+                        </div>
                     </div>
 
                    
@@ -273,8 +316,89 @@
                                   </tbody>
                             </table>
                           </div>
+
+
+                                                                <!--Добавить Основной раздел памятки модальное окно -->
+                        <div class="modal fade" id="OsnovnoyRazdelPamaitky" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticGraficPodachLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color: #7DA5F0;">
+                                <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Основной раздел памятки</span>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row mb-1">
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-custom">Применить</button>
+                                            <button type="button" class="btn btn-custom" data-dismiss="modal">Отменить</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row mb-1">
+                                        <label class="col-auto col-form-label mb-0 label-custom">Номер вагона</label>
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control mt-0 custom-input" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-1">
+                                        <label class="col-auto col-form-label mb-0 label-custom">Грузовая операция</label>
+                                        <div class="col-3">
+                                            <select class="form-select mt-0 custom-input">
+                                                <option value="">Выберете элемент списка</option>
+                                                <option value="Погрузка">Погрузка</option>
+                                                <option value="Выгрузка">Выгрузка</option>
+                                                <option value="Сдвоенная">Сдвоенная</option>
+                                                <option value="Без операций">Без операций</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-1">
+                                        <label class="col-auto col-form-label mb-0 label-custom">Наименование груза</label>
+                                         <div class="col-auto">
+                                            <div class="input-group" style="width: 270px;">
+                                                <input type="text" class="form-control custom-search" placeholder="Поиск" aria-label="Введите запрос">
+                                                <button class="btn btn-outline-secondary" type="button" data-toggle="modal" data-target="#NaimenovanieGruza">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+
+                                    <div class="row mb-1">
+                                        <label class="col-auto col-form-label mb-0 label-custom">Дата подачи</label>
+                                        <div class="col-auto">
+                                            <input type="date" class="form-control mt-0 custom-input" style="width: 150px;">
+                                        </div>
+
+                                        <label class="col-auto col-form-label mb-0 label-custom">Время подачи</label>
+                                        <div class="col-auto">
+                                            <input type="time" class="form-control mt-0 custom-input" style="width: 150px;">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-1">
+                                        <label class="col-auto col-form-label mb-0 label-custom">Дата уборки</label>
+                                        <div class="col-auto">
+                                            <input type="date" class="form-control mt-0 custom-input" style="width: 150px;">
+                                        </div>
+
+                                        <label class="col-auto col-form-label mb-0 label-custom">Время уборки</label>
+                                        <div class="col-auto">
+                                            <input type="time" class="form-control mt-0 custom-input" style="width: 150px;">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!----------------------------- -->
  
-             <!--Найти документ модальное окно -->
+             <!--Подписать документ модальное окно -->
              <div class="modal fade" id="Podpisatdoc" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                   <div class="modal-content">
@@ -408,6 +532,174 @@
             </div>
             <!----------------------------- -->
 
+
+             <!--Найти Станцию модальное окно -->
+             <div class="modal fade" id="Staition" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #7DA5F0;">
+                    <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Станции</span>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-md-center mb-2">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                            <i class="fas fa-times"></i> 
+                                        </button>
+                                        <button class="btn btn-outline-secondary" type="button">
+                                            <i class="fas fa-search"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                            <table class="table table-hover table-bordered border-white">
+                                <thead style="background-color: #7DA5F0; color: white;">
+                                    <tr>
+                                    <th>Код станции</th>
+                                    <th>Наименование станции</th>
+                                    <th>Краткое наименование станции</th>
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-md-end">
+                            <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                            <button type="button" class="btn btn-custom" data-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!----------------------------- -->
+
+            <!--Найти Наименование владельца п/п(клиента) модальное окно -->
+            <div class="modal fade" id="NaimenovanieVladelca" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #7DA5F0;">
+                    <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Владелец п/п</span>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-md-center mb-2">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                            <i class="fas fa-times"></i> 
+                                        </button>
+                                        <button class="btn btn-outline-secondary" type="button">
+                                            <i class="fas fa-search"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                            <table class="table table-hover table-bordered border-white">
+                                <thead style="background-color: #7DA5F0; color: white;">
+                                    <tr>
+                                    <th>Код ОКПО</th>
+                                    <th>Наименование владельца</th>
+                                    <th>ИД бизнеса</th>
+                                    <th>ИД холдинга</th>
+                                    <th>Наименование холдинга</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-md-end">
+                            <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                            <button type="button" class="btn btn-custom" data-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!----------------------------- -->
+
+            <!--Найти Наименование груза модальное окно -->
+            <div class="modal fade" id="NaimenovanieGruza" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #7DA5F0;">
+                    <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Наименование груза</span>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-md-center mb-2">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                            <i class="fas fa-times"></i> 
+                                        </button>
+                                        <button class="btn btn-outline-secondary" type="button">
+                                            <i class="fas fa-search"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                            <table class="table table-hover table-bordered border-white">
+                                <thead style="background-color: #7DA5F0; color: white;">
+                                    <tr>
+                                    <th>Код груза</th>
+                                    <th>Наименование груза</th>
+                                    <th>Краткое наименование груза</th>
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                       
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-md-end">
+                            <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                            <button type="button" class="btn btn-custom" data-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!----------------------------- -->
+
             </div>
 
 
@@ -537,14 +829,10 @@
               </div>
             </div>
             <!----------------------------- -->
+
                 
             </div>
 
-
-<!----------------------------------------------------------------------------------Связные документы-------------------------------------------------------------------------------------------------->
-            <div class="tab-pane fade" style="margin-top: 1em;" id="Sviazdoc-tab-pane" role="tabpanel" aria-labelledby="Sviazdoc-tab" tabindex="0">
-                .......
-            </div>
           </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
