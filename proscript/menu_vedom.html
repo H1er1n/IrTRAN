@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ведомость подачи и уборки</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        .header {
+            background-color: #7DA5F0;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Распределение пространства между элементами */
+            padding: 0 15px; /* Отступы слева и справа */
+            width: 100%; /* Ширина на всю страницу */
+            position: fixed; /* Закрепление шапки в верхней части страницы */
+            top: 0; /* Положение вверху */
+            left: 0; /* Положение слева */
+            z-index: 1000; /* Установка уровня наложения */
+        }
+        .header .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        .header .title {
+            flex-grow: 1; /* Занять все доступное пространство */
+            text-align: center; /* Центрирование текста */
+        }
+        
+        .dropdown {
+            margin-left: 5px; /* Отступ между текстом и кнопкой */
+            margin-right: 30px;
+        }
+        body {
+            padding-top: 50px; /* Отступ сверху для контента, чтобы не перекрывался шапкой */
+        }
+
+        .content-container {
+            padding: 50px 300px;
+            display: flex;
+            flex-flow: row nowrap;
+            box-sizing: border-box;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        .btn-custom {
+            width: auto;
+            background-color: #7DA5F0; 
+            color: white; 
+            margin-left: 15px;
+        }
+        .btn-custom:hover {
+            background-color: #3E6CB4; 
+            color: white; 
+        }
+
+        body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        }
+
+        .custom-input {
+            background-color: #E3E2FF; 
+            height: 30px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            width: 100px;
+            border: 1px solid #C1C1C1; 
+            
+        }
+        .input-group .form-control {
+            background-color: #E3E2FF; 
+            border: 1px solid #C1C1C1; 
+            height: 30px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            
+        }
+
+        .label-custom{
+            width: 200px;
+        }
+
+        .field{
+            border: #9d9fa0 solid 2px;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 0 0 10px 0;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center; 
+            padding-top: 40px;
+            
+        }
+
+        .setting{
+            background-color: #EFEFEF;
+            width: 100%;
+            max-width: 850px;
+            height: auto;
+            border-radius: 10px;
+            padding: 15px;
+            display: block;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/новые формы/proscript/trainpro.html">
+            <img src="/files/icons8-меню-50.png" alt="В меню" style="height: 20px; width: 20px;">
+        </a>
+        <div class="logo">
+            <img src="/files/syspanellogo_2.png" alt="Логотип" height="30px">
+        </div>
+        <div class="title">
+            <h5 class="mb-0" style="color: white;"><b>Тренажер ЭТРАН -
+                Ведомость подачи и уборки</b></h5>
+        </div>
+        <div class="dropdown">
+            <span style="color: white;"><b>Обучающийся</b></span><br>
+            <span style="color: white;">ИрГУПС</span>
+        </div>
+        <a href="/новые формы/login.html"><img src="/files/icons8-выход-50.png" alt="Выйти" style="height: 30px; width: 30px;"></a>
+    </div>
+
+    <div class="container">
+      <form class="setting">
+          <header style="margin-left: 15px;">
+              <div class="row mb-1">
+                  <label class="col-auto col-form-label label-custom mb-0" style="font-size: large; font-weight: bold; width: auto;">Настройки</label>
+              </div>
+          </header>
+
+          <fieldset class="field">
+              <div class="row mb-1">
+                  <label class="col-auto col-form-label label-custom mb-0" style="width: auto;">Ограничение по времени</label>
+                  <input class="form-control custom-input" type="time" value="00:25"> 
+              </div>
+          </fieldset>
+          
+          <footer>
+              <div class="row mb-1">
+                  <button type="submit" class="btn btn-custom" >Подтвердить</button>
+                  <button type="reset" class="btn btn-custom" >Отменить</button>
+              </div>
+          </footer>
+
+      </form>
+    </div>
+        
+    <div class="content-container">
+        
+            <button onclick="window.location.href='proscript/vedom.html'" type="button" class="btn btn-custom" style="width: 300px;">Создать документ</button>
+   
+            <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 300px;">Найти документ</button>
+
+            <!--Найти документ модальное окно -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header" style="background-color: #7DA5F0;">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">Поиск документа</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      По заказу ЭТП
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                      По номеру МЕСПЛАН
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                      Идентификатор заявки
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                                    <label class="form-check-label" for="flexRadioDefault4">
+                                      Номер заявки
+                                    </label>
+                                  </div>
+                              </div>
+                              <div class="col-8"><input type="text" class="form-control" id="formGroupExampleInput" placeholder="Поиск"></div>
+                            </div>
+                         </div>
+                         <div class="row justify-content-md-center">
+                            <button type="button" class="btn btn-custom" style="width: 150px; margin: 1em;">Найти</button>
+                             <button type="button" class="btn btn-custom" data-bs-dismiss="modal" style="width: 150px; margin: 1em;">Отмена</button>
+                        </div>
+                        <div class="table-responsive" style="border: gray solid 1px">
+                            <table class="table table-hover table-bordered border-white">
+                                <thead style="background-color: #7DA5F0; color: white;">
+                                    <tr>
+                                      <th>ID накладной</th>
+                                      <th>№ накладной</th>
+                                      <th>Состояние накладной</th>
+                                      <th>Дата создания документа</th>
+                                      <th>Дата приемосдатчика(дейст.док)</th>
+                                      <th>Наим. станции отправления</th>
+                                      <th>Наим. станции назначения</th>
+                                      <th>№ вагона</th>
+                                      <th>Плательщик</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody class="table-group-divider">
+                                   
+                                  </tbody>
+                            </table>
+                          </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!----------------------------- -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

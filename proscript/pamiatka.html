@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Памятка приемасдатчика</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .header {
+            background-color: #7DA5F0;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 0 15px;
+            width: 100%; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            z-index: 1000; 
+        }
+        
+        .header .title {
+            flex-grow: 1; 
+            text-align: center;
+        }
+        
+        .dropdown {
+            margin-left: 0 5px; 
+            
+        }
+        .btn-custom {
+            width: auto;
+            background-color: #7DA5F0; 
+            color: white; 
+            margin: 3px;
+        }
+        .btn-custom:hover {
+            background-color: #3E6CB4; 
+            color: white; 
+        }
+        body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        padding-top: 50px;
+        }
+
+        .search-box {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: white;
+            height: 70px;
+            width: 100%; 
+            position: fixed; 
+            top: 50px; 
+            left: 15px; 
+            z-index: 1000; 
+            
+        }
+        
+        .content-container {
+            padding: 70px 15px;
+            top: 100px;
+            
+        }
+        .span-custom{
+            background-color: #FFFFDE;
+            border: solid #A8A8A8 1px;
+            color: black;
+            height: 30px;
+            padding: 3px 50px;
+        }
+        .disabled-input {
+            background-color: #FFFFDE; 
+            opacity: 1;
+            height: 30px;
+            width: 270px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            border: 1px solid #C1C1C1; 
+            
+        }
+        .custom-input {
+            background-color: #E3E2FF; 
+            height: 30px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            width: 270px;
+            border: 1px solid #C1C1C1; 
+            
+        }
+        .input-group .form-control {
+            background-color: #E3E2FF; 
+            border: 1px solid #C1C1C1; 
+            height: 30px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            
+        }
+        .input-group .btn {
+            background-color: #E3E2FF; 
+            border: 1px solid #C1C1C1; 
+            height: 30px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+        }
+        .input-group .btn:hover {
+            background-color: #D1D0FF; 
+        }
+        .label-custom{
+            width: 180px;
+        }
+        .form-check-input-checked-bg-color{
+            background-color:  #7DA5F0;;
+        }
+
+        .btn-box {
+           
+            width: 90%;
+            position: fixed; 
+        }
+
+        .modal-title {
+            text-align: center !important;
+        }
+        .selected {
+            background-color: #2165B6; 
+            color: white;
+        }
+
+        .table-bordered {
+            border: 1px solid rgba(135, 135, 135, 0.4);;
+        }
+        .table-bordered th,
+        .table-bordered tr,
+        .table-bordered thead,
+        .table-bordered td {
+            border: 1px solid rgba(135, 135, 135, 0.4);; /* Устанавливаем черный цвет для ячеек */
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <span style="color: white;">Памятка приемасдатчика (Заготовка №----)</span>
+        </div>
+        <div class="dropdown">
+            <a href="/новые формы/proscript/menu_pamiatka.html"><img src="/files/icons8-закрыть-50.png" alt="Закрыть" style="height: 30px; width: 30px;"></a>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <div class="row">
+            <div class="col-auto">
+                <button type="button" class="btn btn-custom">Сохранить</button>
+                <button type="button" class="btn btn-custom">Обновить</button> 
+                <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#Podpisatdoc">Подписать</button> 
+            </div>
+        </div>
+    </div>
+        
+    <div class="content-container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Документ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="History-tab" data-toggle="tab" data-target="#History-tab-pane" type="button" role="tab" aria-controls="History-tab-pane" aria-selected="false">История</button>
+              </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" style="margin-top: 1em;" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            
+               
+                    <div class="row mb-1 justify-content-md-end" style="margin-right: 10px;">
+                        <label class="col-auto col-form-label mb-0 label-custom" style="font-weight: bold;">Форма ГУ-45 ЭТД</label>
+                        <label class="col-auto col-form-label mb-0 label-custom" style="border: solid 1px black; width: 100px;">0000000</label>
+                    </div>
+
+                    <div class="row mb-1 justify-content-md-end" style="margin-right: 10px;">
+                        <label class="col-auto col-form-label mb-0 label-custom" style="width: auto;">Утверждена ОАО "РЖД" в 2015г.</label>
+                    </div>
+
+
+                    <div class="row mb-1">
+                        <label class="col-auto col-form-label mb-0 label-custom">Тип памятки</label>
+                        <div class="col-3">
+                            <select class="form-select mt-0 custom-input">
+                                <option value="">Выберете элемент списка</option>
+                                <option value="На уборку">На уборку</option>
+                                <option value="На подачу">На подачу</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row mb-1">
+                        <label class="col-auto col-form-label mb-0 label-custom">Станция</label>
+                        <div class="col-auto">
+                            <div class="input-group" style="width: 270px;">
+                                <input type="text" class="form-control custom-search" placeholder="Поиск" aria-label="Введите запрос">
+                                <button class="btn btn-outline-secondary" type="button" data-toggle="modal" data-target="#Staition">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                       
+                        <label class="col-auto col-form-label mb-0 label-custom" style="width: 150px;">Номер станции</label>
+                        <div class="col-auto">
+                            <input type="text" class="form-control mt-0 disabled-input" style="width: 120px;" placeholder="" disabled="disabled">
+                        </div>
+                    </div>
+
+                    <div class="row mb-1 justify-content-md-center">
+                        <label class="col-4 col-form-label mb-0 label-custom" style="font-weight: bold;">ПАМЯТКА ПРИЕМАСДАТЧИКА №000000 на подачу вагонов</label>
+                    </div>
+
+                    <div class="row mb-1">
+                        <label class="col-auto col-form-label mb-0 label-custom">Наименование владельца п/п(клиента)</label>
+                         <div class="col-auto">
+                            <div class="input-group" style="width: 270px;">
+                                <input type="text" class="form-control custom-search" placeholder="Поиск" aria-label="Введите запрос">
+                                <button class="btn btn-outline-secondary" type="button" data-toggle="modal" data-target="#NaimenovanieVladelca">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <label class="col-auto col-form-label mb-0 label-custom" style="width: 150px;">Место подачи</label>
+                        <div class="col-auto">
+                            <input type="text" class="form-control mt-0 custom-input" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row mb-1">
+                        <label class="col-auto col-form-label mb-0 label-custom" >Подача производилась локомотивом</label>
+                        <div class="col-auto">
+                            <input type="text" class="form-control mt-0 custom-input"  placeholder="">
+                        </div>
+
+                        <label class="col-auto col-form-label mb-0  label-custom" style="width: 150px;">Индекс поезда</label>
+                        <div class="col-auto">
+                            <input type="text" class="form-control mt-0 custom-input" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row mb-1">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-custom" type="button" data-toggle="modal" data-target="#OsnovnoyRazdelPamaitky">Добавить</button>
+                            <button type="button" class="btn btn-custom">Изменить</button>
+                            <button type="button" class="btn btn-custom">Удалить</button> 
+                            <button type="button" class="btn btn-custom">Копировать</button> 
+                            <button type="button" class="btn btn-custom">Вставить</button> 
+                        </div>
+                    </div>
+
+                   
+                        <div class="table-responsive" style="border: black solid 1px; padding-bottom: 100px;">
+                            <table class="table table-hover table-bordered border-dark">
+                                <thead style="background-color: rgba(135, 135, 135, 0.4); color: black;">
+                                    <tr>
+                                      <th rowspan="2" style="width: 30px;">№п/<br>п</th>
+                                      <th>№ вагона</th>
+                                      <th rowspan="2"  style="width: 30px;">Код <br>ж.д <br>адм.</th>
+                                      <th rowspan="2" style="width: 60px;">Принадл.<br> вагонов</th>
+                                      <th rowspan="2"  style="width: 40px;">Груз.<br> опер.</th>
+                                      <th colspan="3">Время выполнения операции<br> день-месяц<br> часы-минуты</th>
+                                      <th colspan="2">Задержка окончания<br> груз. операции</th>
+                                      <th rowspan="2"  style="width: 30px;">Кол-во<br> взв.</th>
+                                      <th rowspan="2" style="width: 300px;">Примечание</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Наименование груза</th>
+                                        <th>Подача/<br>передача<br> на<br> выстав.<br> путь</th>
+                                        <th>Уведом.<br> о <br>заверш.<br> гр. опер.<br> возврт.<br> на выст.<br> путь</th>
+                                        <th>Уборка</th>
+                                        <th>Время <br> час <br>мин</th>
+                                        <th>№ акта<br> ГУ-23</th>
+                                      </tr>
+                                    <tr>
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+                                        <th>5</th>
+                                        <th>6</th>
+                                        <th>7</th>
+                                        <th>8</th>
+                                        <th>9</th>
+                                        <th>10</th>
+                                        <th>11</th>
+                                        <th>12</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody class="table-group-divider">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                  </tbody>
+                            </table>
+                          </div>
+
+
+                                                                <!--Добавить Основной раздел памятки модальное окно -->
+                        <div class="modal fade" id="OsnovnoyRazdelPamaitky" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticGraficPodachLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color: #7DA5F0;">
+                                <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Основной раздел памятки</span>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row mb-1">
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-custom">Применить</button>
+                                            <button type="button" class="btn btn-custom" data-dismiss="modal">Отменить</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row mb-1">
+                                        <label class="col-auto col-form-label mb-0 label-custom">Номер вагона</label>
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control mt-0 custom-input" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-1">
+                                        <label class="col-auto col-form-label mb-0 label-custom">Грузовая операция</label>
+                                        <div class="col-3">
+                                            <select class="form-select mt-0 custom-input">
+                                                <option value="">Выберете элемент списка</option>
+                                                <option value="Погрузка">Погрузка</option>
+                                                <option value="Выгрузка">Выгрузка</option>
+                                                <option value="Сдвоенная">Сдвоенная</option>
+                                                <option value="Без операций">Без операций</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-1">
+                                        <label class="col-auto col-form-label mb-0 label-custom">Наименование груза</label>
+                                         <div class="col-auto">
+                                            <div class="input-group" style="width: 270px;">
+                                                <input type="text" class="form-control custom-search" placeholder="Поиск" aria-label="Введите запрос">
+                                                <button class="btn btn-outline-secondary" type="button" data-toggle="modal" data-target="#NaimenovanieGruza">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+
+                                    <div class="row mb-1">
+                                        <label class="col-auto col-form-label mb-0 label-custom">Дата подачи</label>
+                                        <div class="col-auto">
+                                            <input type="date" class="form-control mt-0 custom-input" style="width: 150px;">
+                                        </div>
+
+                                        <label class="col-auto col-form-label mb-0 label-custom">Время подачи</label>
+                                        <div class="col-auto">
+                                            <input type="time" class="form-control mt-0 custom-input" style="width: 150px;">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-1">
+                                        <label class="col-auto col-form-label mb-0 label-custom">Дата уборки</label>
+                                        <div class="col-auto">
+                                            <input type="date" class="form-control mt-0 custom-input" style="width: 150px;">
+                                        </div>
+
+                                        <label class="col-auto col-form-label mb-0 label-custom">Время уборки</label>
+                                        <div class="col-auto">
+                                            <input type="time" class="form-control mt-0 custom-input" style="width: 150px;">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!----------------------------- -->
+ 
+             <!--Подписать документ модальное окно -->
+             <div class="modal fade" id="Podpisatdoc" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header" style="background-color: #7DA5F0;">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">Подпись документа</h1>
+                      <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row mb-1 justify-content-md-end" style="margin-right: 10px;">
+                            <label class="col-auto col-form-label mb-0 label-custom" style="font-weight: bold;">Форма ГУ-45 ЭТД</label>
+                            <label class="col-auto col-form-label mb-0 label-custom" style="border: solid 1px black; width: 100px;">0000000</label>
+                        </div>
+    
+                        <div class="row mb-1 justify-content-md-end" style="margin-right: 10px;">
+                            <label class="col-auto col-form-label mb-0 label-custom" style="width: auto;">Утверждена ОАО "РЖД" в 2015г.</label>
+                        </div>
+    
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">Станция:</label>
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(Наименование станции)</label>
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(Номер станции)</label>
+                        </div>
+    
+                        <div class="row mb-1 justify-content-md-center">
+                            <label class="col-4 col-form-label mb-0 label-custom" style="font-weight: bold;">ПАМЯТКА ПРИЕМАСДАТЧИКА №000000 на подачу вагонов</label>
+                        </div>
+    
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">Наименование владельца п/п(клиента):</label>
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(Наименование клиента/владельца)</label>
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">Место подачи:</label>
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(Наименование Места подачи)</label>
+                        </div>
+    
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">Подача производилась:</label>
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(Наименование кем производилась подача)</label>
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">Индекс поезда:</label>
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto;">(индекс)</label>
+                        </div>
+    
+                        <div class="row mb-1">
+                            
+                        </div>
+
+                        <div class="table-responsive" style="border: black solid 1px; padding-bottom: 100px;">
+                            <table class="table table-bordered border-dark">
+                                <thead style="color: black;">
+                                    <tr>
+                                      <th rowspan="2" style="width: 30px;">№п/<br>п</th>
+                                      <th>№ вагона</th>
+                                      <th rowspan="2"  style="width: 30px;">Код <br>ж.д <br>адм.</th>
+                                      <th rowspan="2" style="width: 60px;">Принадл.<br> вагонов</th>
+                                      <th rowspan="2"  style="width: 40px;">Груз.<br> опер.</th>
+                                      <th colspan="3">Время выполнения операции<br> день-месяц<br> часы-минуты</th>
+                                      <th colspan="2">Задержка окончания<br> груз. операции</th>
+                                      <th rowspan="2"  style="width: 30px;">Кол-во<br> взв.</th>
+                                      <th rowspan="2" style="width: 300px;">Примечание</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Наименование груза</th>
+                                        <th>Подача/<br>передача<br> на<br> выстав.<br> путь</th>
+                                        <th>Уведом.<br> о <br>заверш.<br> гр. опер.<br> возврт.<br> на выст.<br> путь</th>
+                                        <th>Уборка</th>
+                                        <th>Время <br> час <br>мин</th>
+                                        <th>№ акта<br> ГУ-23</th>
+                                      </tr>
+                                    <tr>
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+                                        <th>5</th>
+                                        <th>6</th>
+                                        <th>7</th>
+                                        <th>8</th>
+                                        <th>9</th>
+                                        <th>10</th>
+                                        <th>11</th>
+                                        <th>12</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody class="table-group-divider">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                  </tbody>
+                            </table>
+                          </div>
+
+                          <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto; font-weight: bold;">Место для отметок</label>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto; font-weight: bold;">Вагон ПРИНЯЛ</label>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto; font-weight: bold;">Вагон СДАЛ приемасдатчик ж.д.</label>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto; font-weight: bold;">Памятка проведена по ведомости подачи и уборки №</label>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0" for="customCheck1" style="width: auto; font-weight: bold;">Товарный кассир(агент станции)</label>
+                        </div>
+
+                         <div class="row justify-content-md-end">
+                            <button type="button" class="btn btn-custom" style="width: 150px; margin: 1em;">Подписать</button>
+                             <button type="button" class="btn btn-custom" data-dismiss="modal" style="width: 150px; margin: 1em;">Отмена</button>
+                        </div>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!----------------------------- -->
+
+
+             <!--Найти Станцию модальное окно -->
+             <div class="modal fade" id="Staition" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #7DA5F0;">
+                    <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Станции</span>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-md-center mb-2">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                            <i class="fas fa-times"></i> 
+                                        </button>
+                                        <button class="btn btn-outline-secondary" type="button">
+                                            <i class="fas fa-search"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                            <table class="table table-hover table-bordered border-white">
+                                <thead style="background-color: #7DA5F0; color: white;">
+                                    <tr>
+                                    <th>Код станции</th>
+                                    <th>Наименование станции</th>
+                                    <th>Краткое наименование станции</th>
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-md-end">
+                            <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                            <button type="button" class="btn btn-custom" data-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!----------------------------- -->
+
+            <!--Найти Наименование владельца п/п(клиента) модальное окно -->
+            <div class="modal fade" id="NaimenovanieVladelca" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #7DA5F0;">
+                    <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Владелец п/п</span>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-md-center mb-2">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                            <i class="fas fa-times"></i> 
+                                        </button>
+                                        <button class="btn btn-outline-secondary" type="button">
+                                            <i class="fas fa-search"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                            <table class="table table-hover table-bordered border-white">
+                                <thead style="background-color: #7DA5F0; color: white;">
+                                    <tr>
+                                    <th>Код ОКПО</th>
+                                    <th>Наименование владельца</th>
+                                    <th>ИД бизнеса</th>
+                                    <th>ИД холдинга</th>
+                                    <th>Наименование холдинга</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-md-end">
+                            <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                            <button type="button" class="btn btn-custom" data-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!----------------------------- -->
+
+            <!--Найти Наименование груза модальное окно -->
+            <div class="modal fade" id="NaimenovanieGruza" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #7DA5F0;">
+                    <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">Наименование груза</span>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-md-center mb-2">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="clearimput" placeholder="Поиск" aria-label="Поиск">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="clearButton">
+                                            <i class="fas fa-times"></i> 
+                                        </button>
+                                        <button class="btn btn-outline-secondary" type="button">
+                                            <i class="fas fa-search"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive" style="border: #C1C1C1 solid 1px; padding-bottom: 200px;">
+                            <table class="table table-hover table-bordered border-white">
+                                <thead style="background-color: #7DA5F0; color: white;">
+                                    <tr>
+                                    <th>Код груза</th>
+                                    <th>Наименование груза</th>
+                                    <th>Краткое наименование груза</th>
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                       
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-md-end">
+                            <button type="button" class="btn btn-custom" style="width: 70px; margin: 10px;">Да</button>
+                            <button type="button" class="btn btn-custom" data-dismiss="modal" style="width: 70px; margin: 10px;">Нет</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!----------------------------- -->
+
+            </div>
+
+
+
+
+<!----------------------------------------------------------------------------------История изменений-------------------------------------------------------------------------------------------------->
+            <div class="tab-pane fade" style="margin-top: 1em;" id="History-tab-pane" role="tabpanel" aria-labelledby="History-tab" tabindex="0">
+
+                <div class="table-responsive" style="border: black solid 1px; padding-bottom: 100px;">
+                    <table class="table table-hover table-bordered">
+                        <thead style="background-color: rgba(135, 135, 135, 0.4); color: black;">
+                            <tr>
+                                <th>Дата и время операции</th>
+                                <th>Отчетная дата</th>
+                                <th>Должность</th>
+                                <th>ФИО</th>
+                                <th>Операция</th>
+                                <th>Результат</th>
+                                <th>ЭП</th>
+                                <th>Примечание</th>
+                                <th>Рабочее место</th>
+                                <th>Контакты</th>
+                              </tr>
+                          </thead>
+                          <tbody class="table-group-divider">
+                            <tr data-toggle="modal" data-target="#ViewHistory" style="cursor: pointer;">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                          </tbody>
+                    </table>
+                  </div>
+
+                  <!--Посмотреть историю изменений модальное окно -->
+            <div class="modal fade" id="ViewHistory" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header" style="background-color: #7DA5F0;">
+                      <span class="modal-title text-center" id="staticBackdropLabel" style="color: white; font-weight: bold;">История изменений</span>
+                      <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть" style="color: white;"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0 label-custom">Дата и время операции</label>
+                            <div class="col-auto">
+                                <input type="text" class="form-control mt-0 custom-input" style="min-width: 100%;" placeholder="" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0 label-custom" >Отчетная дата</label>
+                            <div class="col-auto">
+                                <input type="text" class="form-control mt-0 custom-input" style="min-width: 100%;" placeholder="" disabled>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0 label-custom" >Должность</label>
+                            <div class="col-auto">
+                                <input type="text" class="form-control mt-0 custom-input" style="min-width: 100%;" placeholder="" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0 label-custom" >ФИО</label>
+                            <div class="col-auto">
+                                <input type="text" class="form-control mt-0 custom-input" style="min-width: 100%;" placeholder="" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0 label-custom" >Операция</label>
+                            <div class="col-auto">
+                                <input type="text" class="form-control mt-0 custom-input" style="min-width: 100%;" placeholder="" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0 label-custom" >Результат</label>
+                            <div class="col-auto">
+                                <input type="text" class="form-control mt-0 custom-input" style="min-width: 100%;" placeholder="" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0 label-custom" >ЭП</label>
+                            <div class="col-auto">
+                                <input type="text" class="form-control mt-0 custom-input" style="min-width: 100%;" placeholder="" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0 label-custom" >Рабочее место</label>
+                            <div class="col-auto">
+                                <input type="text" class="form-control mt-0 custom-input" style="min-width: 100%;" placeholder="" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0 label-custom" >Контакты</label>
+                            <div class="col-auto">
+                                <input type="text" class="form-control mt-0 custom-input" style="min-width: 100%;" placeholder="" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mb-1">
+                            <label class="col-auto col-form-label mb-0 label-custom" >Примечание</label>
+                            <div class="col-auto">
+                                <input type="text" class="form-control mt-0 custom-input" style="min-width: 100%; height: 200px;" placeholder="" disabled>
+                            </div>
+                        </div>
+                        
+                          <div class="row mb-1 justify-content-md-end">
+                             <button type="button" class="btn btn-custom" style="width: 80px; margin-right: 30px;">Печать</button>
+                            </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!----------------------------- -->
+
+                
+            </div>
+
+          </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Блокировка прокрутки родительского окна
+        $('#DobavitOtpravka').on('show.bs.modal', function () {
+            $('body').css('overflow', 'hidden');
+        });
+
+   
+        $(document).on('hidden.bs.modal', '.modal', function () {
+            $('.modal:visible').length && $(document.body).addClass('modal-open');
+        });
+    
+        // Восстановление прокрутки родительского окна
+        $('#DobavitOtpravka').on('hidden.bs.modal', function () {
+            $('body').css('overflow', ''); // Восстанавливаем прокрутку
+        });
+
+         
+    </script>
+
+    <script>
+        //очистить поле
+        document.getElementById('clearButton').addEventListener('click', function() {
+            document.getElementById('clearimput').value = '';
+        });
+    </script>
+    <script>
+        // Функция для выделения строки при клике на чекбокс
+        $(document).ready(function() {
+            $('.row-checkbox').change(function() {
+                // Получаем родительский элемент tr
+                var row = $(this).closest('tr');
+                // Если чекбокс отмечен, добавляем класс 'selected', иначе удаляем
+                if ($(this).is(':checked')) {
+                    row.addClass('selected');
+                } else {
+                    row.removeClass('selected');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
